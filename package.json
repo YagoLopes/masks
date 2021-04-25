@@ -7,18 +7,16 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yagolopes/unityform.git"
+    "url": "https://github.com/yagolopes/masks.git"
   },
   "bugs": {
-    "url": "https://github.com/yagolopes/unityform/issues"
+    "url": "https://github.com/yagolopes/masks/issues"
   },
   "keywords": [
     "masks",
     "mascaras",
     "mask",
-    "mascara",
-    "brasil",
-    "brazil"
+    "mascara"
   ],
   "scripts": {
     "build": "tsc -p ."

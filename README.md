@@ -1,17 +1,17 @@
-# masks-br
+# @yagolopes/masks
 
 Biblioteca de máscaras do Brasil
 
 ## Instalação
 
 ```bash
-npm install masks-br
+npm install @yagolopes/masks
 ```
 
 ou
 
 ```bash
-yarn add masks-br
+yarn add @yagolopes/masks
 ```
 
 ## Utilização
@@ -19,10 +19,10 @@ yarn add masks-br
 ### CPF
 
 ```javascript
-import { cpfMask } from 'masks-br';
-// ou const { cpfMask } = require('masks-br');
+import { CPF } from "@yagolopes/masks";
+// ou const { CPF } = require('@yagolopes/masks');
 
-const cpf = cpfMask('59636985148');
+const cpf = CPF.mask("59636985148");
 
 console.log(cpf); // '596.369.851-48'
 ```
@@ -30,10 +30,10 @@ console.log(cpf); // '596.369.851-48'
 ### RG
 
 ```javascript
-import { rgMask } from 'masks-br';
-// ou const { rgMask } = require('masks-br');
+import { RG } from "@yagolopes/masks";
+// ou const { RG } = require('@yagolopes/masks');
 
-const rg = rgMask('698554859');
+const rg = RG.mask("698554859");
 
 console.log(rg); // '69.855.485-9'
 ```
@@ -41,10 +41,10 @@ console.log(rg); // '69.855.485-9'
 ### CNPJ
 
 ```javascript
-import { cnpjMask } from 'masks-br';
-// ou const { cnpjMask } = require('masks-br');
+import { CNPJ } from "@yagolopes/masks";
+// ou const { CNPJ } = require('@yagolopes/masks');
 
-const cnpj = cnpjMask('34234234234234');
+const cnpj = CNPJ.mask("34234234234234");
 
 console.log(cnpj); // '34.234.234/2342-34'
 ```
@@ -52,10 +52,10 @@ console.log(cnpj); // '34.234.234/2342-34'
 ### Celular
 
 ```javascript
-import { celularMask } from 'masks-br';
-// ou const { celularMask } = require('masks-br');
+import { CELULAR } from "@yagolopes/masks";
+// ou const { CELULAR } = require('@yagolopes/masks');
 
-const celular = celularMask('11958625974');
+const celular = CELULAR.mask("11958625974");
 
 console.log(celular); // '(11) 95862-5974'
 ```
@@ -63,10 +63,10 @@ console.log(celular); // '(11) 95862-5974'
 ### Telefone
 
 ```javascript
-import { telefoneMask } from 'masks-br';
-// ou const { telefoneMask } = require('masks-br');
+import { TELEFONE } from "@yagolopes/masks";
+// ou const { TELEFONE } = require('@yagolopes/masks');
 
-const telefone = telefoneMask('1195862597');
+const telefone = TELEFONE.mask("1195862597");
 
 console.log(telefone); // '(11) 9586-2597'
 ```
@@ -74,10 +74,10 @@ console.log(telefone); // '(11) 9586-2597'
 ### CEP
 
 ```javascript
-import { cepMask } from 'masks-br';
-// ou const { cepMask } = require('masks-br');
+import { CEP } from "@yagolopes/masks";
+// ou const { CEP } = require('@yagolopes/masks');
 
-const cep = cepMask('06985596');
+const cep = CEP.mask("06985596");
 
 console.log(cep); // '06985-596'
 ```
@@ -85,10 +85,10 @@ console.log(cep); // '06985-596'
 ### Número
 
 ```javascript
-import { numeroMask } from 'masks-br';
-// ou const { numeroMask } = require('masks-br');
+import { NUMERO } from "@yagolopes/masks";
+// ou const { NUMERO } = require('@yagolopes/masks');
 
-const numero = numeroMask(123456.789);
+const numero = NUMERO.mask(123456.789);
 
 console.log(numero); // '123.456,789'
 ```
@@ -96,10 +96,10 @@ console.log(numero); // '123.456,789'
 ### Porcentagem
 
 ```javascript
-import { porcentagemMask } from 'masks-br';
-// ou const { porcentagemMask } = require('masks-br');
+import { PORCENTAGEM } from "@yagolopes/masks";
+// ou const { PORCENTAGEM } = require('@yagolopes/masks');
 
-const porcentagem = porcentagemMask(26.95);
+const porcentagem = PORCENTAGEM.mask(26.95);
 
 console.log(porcentagem); // '26,95%'
 ```
@@ -107,10 +107,10 @@ console.log(porcentagem); // '26,95%'
 ### Dinheiro
 
 ```javascript
-import { dinheiroMask } from 'masks-br';
-// ou const { dinheiroMask } = require('masks-br');
+import { DINHEIRO } from "@yagolopes/masks";
+// ou const { DINHEIRO } = require('@yagolopes/masks');
 
-const dinheiro = dinheiroMask(123456.78);
+const dinheiro = DINHEIRO.mask(123456.78);
 
 console.log(dinheiro); // 'R$ 123.456,78'
 ```
@@ -118,10 +118,10 @@ console.log(dinheiro); // 'R$ 123.456,78'
 ### Cartão
 
 ```javascript
-import { cardMask } from 'masks-br';
-// ou const { cardMask } = require('masks-br');
+import { CARTAO } from "@yagolopes/masks";
+// ou const { CARTAO } = require('@yagolopes/masks');
 
-const masked = cardMask(1234567891234567);
+const cartao = CARTAO.mask(1234567891234567);
 
-console.log(masked); // '1234 5678 9123 4567'
+console.log(cartao); // '1234 5678 9123 4567'
 ```
