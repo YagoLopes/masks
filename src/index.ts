@@ -1,1 +1,1 @@
-export * as BR from "./br";
+export * as BR from './br';

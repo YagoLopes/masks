@@ -1,3 +1,3 @@
 export const cleanMask = (value: string): string => {
-  return String(value).replace(/[.\-() /]/g, "");
+  return String(value).replace(/[.\-() /]/g, '');
 };

@@ -1,4 +1,4 @@
-import { cleanMask } from "../utils";
+import { cleanMask } from '../utils';
 export const CPF = {
   /**
    * Máscara de CPF
@@ -11,11 +11,11 @@ export const CPF = {
     const ret = String(value);
 
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d{1,2})/, "$1-$2")
-      .replace(/(-\d{2})\d+?$/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1');
   },
   /**
    * Limpa a string que já esta formatado pela máscara de CPF
@@ -38,11 +38,11 @@ export const RG = {
   mask: (value: string | number): string => {
     const ret = String(value);
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{2})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d{1,2})/, "$1-$2")
-      .replace(/(-\d{1})\d+?$/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{2})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+      .replace(/(-\d{1})\d+?$/, '$1');
   },
   /**
    * Limpa a string que já esta formatado pela máscara de RG
@@ -65,12 +65,12 @@ export const CNPJ = {
   mask: (value: string | number): string => {
     const ret = String(value);
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{2})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1/$2")
-      .replace(/(\d{4})(\d)/, "$1-$2")
-      .replace(/(-\d{2})\d+?$/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{2})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1.$2')
+      .replace(/(\d{3})(\d)/, '$1/$2')
+      .replace(/(\d{4})(\d)/, '$1-$2')
+      .replace(/(-\d{2})\d+?$/, '$1');
   },
   /**
    * Limpa a string que já esta formatado pela máscara de CNPJ
@@ -101,10 +101,10 @@ export const CELULAR = {
     }
 
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{2})(\d)/, "($1) $2")
-      .replace(/(\d{5})(\d)/, "$1-$2")
-      .replace(/(-\d{4})\d+?$/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{2})(\d)/, '($1) $2')
+      .replace(/(\d{5})(\d)/, '$1-$2')
+      .replace(/(-\d{4})\d+?$/, '$1');
   },
 
   /**
@@ -129,10 +129,10 @@ export const TELEFONE = {
     const ret = String(value);
 
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{2})(\d)/, "($1) $2")
-      .replace(/(\d{4})(\d)/, "$1-$2")
-      .replace(/(-\d{4})\d+?$/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{2})(\d)/, '($1) $2')
+      .replace(/(\d{4})(\d)/, '$1-$2')
+      .replace(/(-\d{4})\d+?$/, '$1');
   },
 
   /**
@@ -157,9 +157,9 @@ export const CEP = {
     const ret = String(value);
 
     return ret
-      .replace(/\D/g, "")
-      .replace(/(\d{5})(\d)/, "$1-$2")
-      .replace(/(-\d{3})(\d)/, "$1");
+      .replace(/\D/g, '')
+      .replace(/(\d{5})(\d)/, '$1-$2')
+      .replace(/(-\d{3})(\d)/, '$1');
   },
   /**
    * Limpa a string que já esta formatado pela máscara de CEP
@@ -180,13 +180,13 @@ export const NUMERO = {
    */
   mask: (
     initialValue: string | number,
-    config: { minimumFractionDigits: number } = { minimumFractionDigits: 2 }
+    config: { minimumFractionDigits: number } = { minimumFractionDigits: 2 },
   ): string => {
     const value = initialValue ? Number(initialValue) : 0;
 
-    return new Intl.NumberFormat("pt-BR", {
+    return new Intl.NumberFormat('pt-BR', {
       ...config,
-      style: "decimal",
+      style: 'decimal',
     }).format(value);
   },
   /**
@@ -232,17 +232,20 @@ export const DINHEIRO = {
    * Máscara de Dinheiro
    * @example
    * mask(123456.78)
-   * // returns R$ 123.456,78
+   * // returns R$ 123.456,78
    * @param {string} value Valor com máscara de Dinheiro
    */
-  mask: (initialValue: number | string, options?: DinheiroMaskConfig) => {
+  mask: (
+    initialValue: number | string,
+    options?: DinheiroMaskConfig,
+  ): string => {
     const opts = {
-      currency: "BRL",
+      currency: 'BRL',
       ...options,
-      style: "currency",
+      style: 'currency',
       locale: undefined,
     };
-    const locale = options?.locale || "pt-BR";
+    const locale = options?.locale || 'pt-BR';
 
     const value = initialValue ? Number(initialValue) : 0;
 
@@ -259,8 +262,8 @@ export const DINHEIRO = {
   clean: (value: string): number => {
     return parseFloat(
       String(value)
-        .replace(/[R$.\-() /]/g, "")
-        .replace(",", ".")
+        .replace(/[R$.\-() /]/g, '')
+        .replace(',', '.'),
     );
   },
 };
@@ -275,10 +278,10 @@ export const CARTAO = {
    */
   mask: (initialValue: string | number): string => {
     return String(initialValue)
-      .replace(/\D/g, "")
-      .replace(/(\d{4})(\d)/, "$1 $2")
-      .replace(/( \d{4})(\d)/, "$1 $2")
-      .replace(/( \d{4})(\d)/, "$1 $2");
+      .replace(/\D/g, '')
+      .replace(/(\d{4})(\d)/, '$1 $2')
+      .replace(/( \d{4})(\d)/, '$1 $2')
+      .replace(/( \d{4})(\d)/, '$1 $2');
   },
 
   /**
