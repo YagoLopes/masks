@@ -1,4 +1,4 @@
-import { BR } from '../../index';
+import { BR } from '../../';
 
 describe('Teste função de formatar CPF', () => {
   it('Teste input number 59636985148', () => {

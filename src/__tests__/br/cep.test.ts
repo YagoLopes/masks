@@ -1,4 +1,4 @@
-import { BR } from '../../index';
+import { BR } from '../../';
 
 describe('Teste função de formatar CEP', () => {
   it('Teste input string 06985596', () => {

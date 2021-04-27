@@ -1,4 +1,4 @@
-import { BR } from '../../index';
+import { BR } from '../../';
 
 describe('Teste função de formatar porcentagem', () => {
   it('Teste number 13.5', () => {

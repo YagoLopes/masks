@@ -1,4 +1,4 @@
-import { BR } from '../../index';
+import { BR } from '../../';
 
 describe('Teste função de formatar RG', () => {
   it('Teste input number 698554859', () => {
