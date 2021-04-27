@@ -153,10 +153,8 @@ export const CEP = {
    * // returns 06985-596
    * @param {string} value Valor que será transformado em CEP
    */
-  mask: (value: string | number): string => {
-    const ret = String(value);
-
-    return ret
+  mask: (value: string): string => {
+    return value
       .replace(/\D/g, '')
       .replace(/(\d{5})(\d)/, '$1-$2')
       .replace(/(-\d{3})(\d)/, '$1');
@@ -168,7 +166,11 @@ export const CEP = {
    * // returns 1195862597
    * @param {string} value Valor que será limpo
    */
-  clean: cleanMask,
+  clean: (value: string): string => {
+    return String(value)
+      .replace(/[.\-%() /]/g, '')
+      .replace(',', '.');
+  },
 };
 export const NUMERO = {
   /**
