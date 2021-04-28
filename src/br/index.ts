@@ -251,7 +251,9 @@ export const DINHEIRO = {
 
     const value = initialValue ? Number(initialValue) : 0;
 
-    return new Intl.NumberFormat(locale, opts).format(value);
+    return new Intl.NumberFormat(locale, opts)
+      .format(value)
+      .replace(/\s/g, ' ');
   },
 
   /**
