@@ -5,13 +5,13 @@ Biblioteca de máscaras do Brasil
 ## Instalação
 
 ```bash
-npm install @yagolopes/masks/br
+npm install @yagolopes/masks
 ```
 
 ou
 
 ```bash
-yarn add @yagolopes/masks/br
+yarn add @yagolopes/masks
 ```
 
 ## Utilização
@@ -34,8 +34,8 @@ console.log(cpf); // '59636985148'
 ### RG
 
 ```javascript
-import { RG } from '@yagolopes/masks/br/br';
-// ou const { RG } = require('@yagolopes/masks/br/br');
+import { RG } from '@yagolopes/masks/br';
+// ou const { RG } = require('@yagolopes/masks/br');
 
 // Add mask
 const rg = RG.mask('698554859');
