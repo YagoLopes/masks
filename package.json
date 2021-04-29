@@ -1,7 +1,7 @@
 {
   "name": "@yagolopes/masks",
   "description": "Máscaras para Javascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "author": "Yago Lopes",
   "license": "MIT",
